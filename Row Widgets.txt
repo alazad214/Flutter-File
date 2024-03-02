@@ -1,0 +1,47 @@
+Row বরাবর Container তৈরি করার জন্য Scaffold-এর ভিতরে Row প্রোপার্টি নিয়ে কাজ করতে হবে-->>
+
+
+
+ body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+        children: [
+
+          Container(
+            height: 100,
+            width: 105,
+            decoration: BoxDecoration(
+              color: Colors.red),
+            child: Image.network("......"),
+            alignment: Alignment.topCenter,
+            margin: EdgeInsets.fromLTRB(0, 5, 0, 0),
+            padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
+            ),
+
+
+          Container(
+            height: 100,
+            width: 105,
+            decoration: BoxDecoration(
+              color: Colors.red),
+            child: Image.network("....."),
+            alignment: Alignment.topCenter,
+            margin: EdgeInsets.fromLTRB(0, 5, 0, 0),
+            padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
+          ),
+
+
+          Container(
+            height: 100,
+            width: 105,
+            decoration: BoxDecoration(
+              color: Colors.red),
+            child: Image.network("...."),
+            alignment: Alignment.topCenter,
+            margin: EdgeInsets.fromLTRB(0, 5, 0, 0),
+            padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
+          ),
+
+
+        ],
+      ),

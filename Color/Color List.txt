@@ -1,0 +1,19 @@
+ডিফল্টভাবে ফ্লাটারে কালার লিস্ট তৈরি করতে একটা ফ্লাটার ফাইল তৈরি করে সেই ফাইলে নিচের মতো কোডগুলো লেখতে হবে:
+
+
+
+import 'dart:ui';
+
+class AppColors {
+  static const white_c = Color(0xFFFFFFFF);
+  static const black_c = Color(0xFF000000);
+  static const indigo_c = Color(0xFF8AA6DA);
+  static const gray_c = Color(0xFFBBB9BA);
+  static const red_c = Color(0xFFFF0080);
+  static const orange_c = Color(0xFFFF8300);
+  
+}
+
+
+used করতে-->
+  backgroundColor: AppColors.white_c,

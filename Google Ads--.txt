@@ -1,0 +1,7 @@
+Google Ads-->
+
+কোনো অ্যাপে google ads দেয়ার জন্য pub.dev থেকে "google mobile ads" এই প্যাকেজটি pubspec.yaml ফাইলে implementation করবো। 
+
+এরপর Main ফাংশনে নিচের কোডগুলো বসাবো:
+  WidgetsFlutterBinding.ensureInitialized();
+  MobileAds.instance.initialize();

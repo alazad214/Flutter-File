@@ -1,0 +1,69 @@
+TimePicker & DatePicker তৈরি করার জন্য প্রথমে দুইটা String- এ Time, Date নামে Variable নিতে হবে। 
+এরপর দুইটা মেথড তৈরি করে নিতে হবে। যাদের মধ্যে কোডসমুহ থাকবে। যেমন:
+
+
+String? time;
+String? date;
+
+  PicTime(context) async{
+    final PickedTime=await showTimePicker(context: context,
+        initialTime: TimeOfDay(hour: 5, minute: 0));
+    print(PickedTime);
+    Time="${PickedTime!.hour}:${PickedTime!.minute}";
+    setState(() {
+    });
+  } 
+
+  PicDate(context)async{
+     final PickedDate=await showDatePicker(context: context,
+         initialDate: DateTime(2000),
+         firstDate: DateTime(1950),
+         lastDate: DateTime(2024));
+     Date="${PickedDate!.day}:${PickedDate!.month}:${PickedDate!.year}";
+     setState(() {
+     });
+ }
+
+এরপর body তে দুইটা Text নিতে হবে। যাদের মধ্যে time & date কল করা থাকবে।
+এবং দুইটা Button নিতে হবে যাদের OnPressed(){}-এ PicTime & PicDate কল করে দিতে হবে।যেমন:
+
+Container(
+          padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+          height: 120,
+            width: double.infinity,
+            color: Colors.black12,
+
+            child: Column(
+              children: [
+
+                Text("Time: $Time",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 25,
+                    fontWeight: FontWeight.w500
+                 ),
+               	 Text("Date: $Date",
+                      style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 25,
+                      fontWeight: FontWeight.w500
+                  ),),
+
+              ],
+            )
+        ),
+
+  Container(
+          height: 100,
+          width: double.infinity,
+          color: Colors.black26,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ElevatedButton(onPressed: (){PicTime(context);}, child: Text("Time")),
+              ElevatedButton(onPressed: (){PicDate(context);}, child: Text("Date"))
+            ],
+          ),
+        )
+
+[Body-তে নিজের মতো করে ডিজাইন করতে পারি।আর অবশ্যই Statefull widget হতে হবে।]

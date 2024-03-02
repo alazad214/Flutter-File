@@ -1,0 +1,39 @@
+অ্যাপবার তৈরি করার জন্য Scaffold-এর ভিতরে appBar প্রোপার্টি নিয়ে কাজ করতে হবে-->>
+
+
+
+return Scaffold(
+
+
+      appBar: AppBar(
+        title: Text("MyApp",
+
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 25,
+        ),),
+
+        backgroundColor: Colors.teal,
+
+        toolbarHeight: 70,
+
+        elevation: 0,
+
+        leading: Icon(Icons.menu,
+        color: Colors.black,
+        size: 35,),
+
+        titleSpacing: 2,
+
+        actions: [
+          IconButton(onPressed: (){
+            MySnackBar("This is Profile", context);},
+            icon: Icon(Icons.person),
+            color: Colors.black,
+            iconSize: 35,
+            padding: EdgeInsets.fromLTRB(0, 0, 30, 0),),
+        ],
+
+
+      ),
+    );

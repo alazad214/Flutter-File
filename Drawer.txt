@@ -1,0 +1,59 @@
+DrawerHeader তৈরি করার জন্য Scaffold-এর ভিতরে drawer প্রোপার্টি নিয়ে কাজ করতে হবে-->>
+
+
+drawer: Drawer(
+        child: ListView(
+          children: [
+
+            DrawerHeader(child: UserAccountsDrawerHeader(
+              accountName: Text("MyApp"),
+              onDetailsPressed: (){
+                MySnackBar("This is DrawerHeader", context);
+              },
+              accountEmail: Text("alazad214@gmail.com"),
+              currentAccountPicture: Image.network("-----"),
+                ),
+
+       		 padding: EdgeInsets.all(0),
+		 ),
+
+
+            ListTile(
+              leading: Icon(Icons.person,color: Colors.teal,size: 28,),
+              title: Text("Profile" ,style: TextStyle(
+                color: Colors.teal,
+              fontSize: 22),),
+              onTap: (){
+                MySnackBar("This is Profile", context);
+              },
+            ),
+
+
+
+            ListTile(
+              leading: Icon(Icons.notification_add,color: Colors.teal,size: 28,),
+              title: Text("Notification" ,style: TextStyle(
+                  color: Colors.teal,
+                  fontSize: 22),),
+              onTap: (){
+                MySnackBar("This is Profile", context);
+              },
+	      ),
+
+
+
+            ListTile(
+              leading: Icon(Icons.star_rate,color: Colors.teal,size: 28,),
+              title: Text("Rate" ,style: TextStyle(
+                  color: Colors.teal,
+                  fontSize: 22),),
+              onTap: (){
+                MySnackBar("This is Profile", context);
+              },
+
+            ),
+
+
+          ],
+        ),
+      ),

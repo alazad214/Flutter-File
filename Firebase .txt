@@ -1,0 +1,13 @@
+Project-এ Firebase এড করার ধাপগুলো হলো:
+
+১.Firebase core Package initialize..
+২.Firebase -এর জন্য SHA-1 key বের করা।[ keytool -list -v -keystore C:\Users\alaza\.android\debug.keystore -alias androiddebugkey -storepass android -keypass android ]
+৩.main Function-এ->
+Future <void> main()async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(const MyApp());
+}
+
+৪.FireBase-এ একটি প্রজেক্ট তৈরি।[package name, app name, SHA-1 key দিয়ে next...]
+৫.firebase json file download & add to andorid/app file ...

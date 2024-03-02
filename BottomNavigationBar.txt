@@ -1,0 +1,35 @@
+আইটেম-১:  
+
+ bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 1,
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.email),label: "Email"),
+          BottomNavigationBarItem(icon: Icon(Icons.facebook),label: "Facebook"),
+          BottomNavigationBarItem(icon: Icon(Icons.place_outlined),label: "Location" ),
+        ],
+
+        onTap: (int index){
+
+          if(index==0){
+            MySnackBar("This is Email", context);
+          }
+
+          if(index==1){
+            MySnackBar("This is Facebook", context);
+          }
+
+          if(index==2){
+            MySnackBar("This is Location", context);
+          }
+
+        },
+      ),
+
+
+
+
+
+
+আইটেম-২:
+
+

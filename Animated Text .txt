@@ -1,0 +1,12 @@
+Animated Text তৈরি করার জন্য  animated_text_kit: ^4.2.2 প্যাকেজটি এড করতে হবে। এরপর নিচের কোডগুলো লেখতে হবে...
+
+          AnimatedTextKit(
+              animatedTexts: [
+                RotateAnimatedText("Flutter News App",
+                    textStyle: const TextStyle(fontSize: 30, fontFamily: "Font1"),
+                    duration: const Duration(seconds: 5))
+              ],
+            ),
+
+
+যদি অ্যানিমেশন পরিবর্তন করতে চাই তাহলে RotateAnimatedText এর জায়গায় নির্ধারিত animated text দিয়ে কোড করতে হবে।

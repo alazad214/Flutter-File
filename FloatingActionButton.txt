@@ -1,0 +1,19 @@
+Floationg Action Button তৈরি করার জন্য Scaffold-এর ভিতরে Floationg Action Button প্রোপার্টি নিয়ে কাজ করতে হবে-->>
+
+  floatingActionButton: Container(
+        height: 70,
+        width: 70,
+        child: FittedBox(
+          child:  FloatingActionButton(
+            elevation: 0,
+            onPressed: (){
+              MySnackBar("This is a FloatingActionButton", context);
+            },
+            backgroundColor: Colors.teal,
+            child: Icon(Icons.add, size: 30,),
+            foregroundColor: Colors.black,
+          ),
+        ),
+        margin:EdgeInsets.fromLTRB(0, 0, 15, 0),
+
+      )

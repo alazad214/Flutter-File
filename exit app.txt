@@ -1,0 +1,41 @@
+
+   Exit(context) async => showDialog(
+      context: context,
+      builder: (_) {
+        return CupertinoAlertDialog(
+          title: const Text('অ্যাপ থেকে বের হতে চান?'),
+          content: Row(
+            children: [
+              OutlinedButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Text("না")),
+              const SizedBox(
+                width: 30,
+              ),
+              OutlinedButton(
+                  onPressed: () {
+                    SystemNavigator.pop();
+                  },
+                  child: const Text("হ্যাঁ")),
+            ],
+          ),
+        );
+      });
+
+
+
+
+ @override
+  Widget build(BuildContext context) {
+    return WillPopScope(
+      onWillPop: () {
+        Exit(context);
+        return Future.value(false);
+      },
+      child: Scaffold(
+        backgroundColor: AppColors.white_c,
+      ),
+    );
+  }

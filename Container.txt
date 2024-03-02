@@ -1,0 +1,18 @@
+Container তৈরি করার জন্য Scaffold-এর ভিতরে body:Container প্রোপার্টি নিয়ে কাজ করতে হবে-->>
+
+body: Container(
+        height: 100,
+        width: 500,
+        padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
+        margin: EdgeInsets.fromLTRB(0, 5, 0, 0),
+        decoration: BoxDecoration(
+          color: Colors.blue,
+        ),
+        child: Text("MyApp", style: TextStyle(
+          color: Colors.black,
+          fontSize: 30,
+          backgroundColor: Colors.blueGrey,
+        ),),
+        alignment: Alignment.topCenter,
+        
+      ),

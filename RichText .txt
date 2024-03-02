@@ -1,0 +1,23 @@
+RichText তৈরি করার জন্য Scaffold-এর ভিতরে Body প্রোপার্টি নিয়ে কাজ করতে হবে-->>    
+
+
+body: Text.rich(
+      TextSpan(
+        children:[
+          TextSpan(
+            text: "bangladesh ",
+            style: TextStyle(
+              color: Colors.pink,
+              fontSize: 25,
+              fontWeight: FontWeight.w800,
+            )
+          ),
+          TextSpan(
+            text:"Lorem ipsum dolort amet. comes from a line in section 1.10.32."
+                "",style: TextStyle(
+            color: Colors.black,
+          fontSize: 20, fontWeight: FontWeight.w500,)
+          ),
+        ]
+      )
+    ),

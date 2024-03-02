@@ -1,0 +1,21 @@
+ Padding & Margin তৈরি করার জন্য Scaffold-এর ভিতরে body প্রোপার্টি নিয়ে কাজ করতে হবে-->>  
+
+body: Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      Container(
+        padding: EdgeInsets.all(20),
+        color: Colors.teal,
+        height: 100,
+        width: 200,
+        child: Text("bagnladesh is a beautifull country"),
+      ),
+      Container(
+        margin: EdgeInsets.all(20),
+        color: Colors.teal,
+        height: 100,
+        width: 200,
+        child: Text("bagnladesh is a beautifull country"),
+      ),
+    ],
+  ),

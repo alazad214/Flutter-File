@@ -1,0 +1,13 @@
+  Row বরাবর Button তৈরি করার জন্য Scaffold-এর ভিতরে body-তে কাজ করতে হবে-->>
+
+
+
+ body: Row(
+
+       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+       children: [
+         TextButton(onPressed: (){MySnackBar("TextButton", context);}, child: Text("TextButton")),
+         ElevatedButton(onPressed: (){MySnackBar("ElevatedButton", context);}, child: Text("ElevatedButton")),
+         OutlinedButton(onPressed: (){MySnackBar("OutLineButton", context);}, child: Text("OutlineButton")),
+       ],
+      )

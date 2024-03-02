@@ -1,0 +1,102 @@
+ SizeBox তৈরি করার জন্য Scaffold-এর ভিতরে body প্রোপার্টি নিয়ে কাজ করতে হবে-->>
+
+
+ body: Container(
+    height: double.infinity,
+    width: double.infinity,
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.lime
+          ),
+          padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+          width: double.infinity,
+          child: Text.rich(TextSpan(
+            children: [
+              TextSpan(
+                text: 'bangladesh' ,
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 22,
+                  fontWeight: FontWeight.w500
+                )
+              ) ,
+              TextSpan(
+                text: ' is a beautifull country. Bangladesh is a south twince' ,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w400
+                )
+              )
+            ]
+          )),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Container(
+          decoration: BoxDecoration(
+              color: Colors.lime
+          ),
+          padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+          width: double.infinity,
+          child: Text.rich(TextSpan(
+              children: [
+                TextSpan(
+                    text: 'bangladesh' ,
+                    style: TextStyle(
+                        color: Colors.red,
+                        fontSize: 22,
+                        fontWeight: FontWeight.w500
+                    )
+                ) ,
+                TextSpan(
+                    text: ' is a beautifull country. Bangladesh i indepandance twince' ,
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400
+                    )
+                )
+              ]
+          )),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Container(
+          decoration: BoxDecoration(
+              color: Colors.lime
+          ),
+          padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+          width: double.infinity,
+          child: Text.rich(TextSpan(
+              children: [
+                TextSpan(
+                    text: 'bangladesh' ,
+                    style: TextStyle(
+                        color: Colors.red,
+                        fontSize: 22,
+                        fontWeight: FontWeight.w500
+                    )
+                ) ,
+                TextSpan(
+                    text: ' is a beautifull country. Bangladesh dance twince' ,
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400
+                    )
+                )
+              ]
+          )),
+        ),
+
+
+      ],
+
+    ),
+  ),

@@ -1,0 +1,40 @@
+ Wrap Widget তৈরি করার জন্য Scaffold-এর ভিতরে BOdy প্রোপার্টি নিয়ে কাজ করতে হবে-->>
+
+
+body: Container(
+     height: 400,
+     width: double.maxFinite,
+     child: Wrap(
+       spacing: 10,
+       alignment: WrapAlignment.center,
+       runSpacing: 10,
+       children: [
+         Container(
+           height: 200,
+           width: 100,
+           decoration: BoxDecoration(color: Colors.orange),
+         ),
+         Container(
+           height: 200,
+           width: 100,
+           decoration: BoxDecoration(color: Colors.orange),
+         ),
+         Container(
+           height: 200,
+           width: 100,
+           decoration: BoxDecoration(color: Colors.orange),
+         ),
+         Container(
+           height: 200,
+           width: 100,
+           decoration: BoxDecoration(color: Colors.orange),
+         ),
+         Container(
+           height: 200,
+           width: 100,
+           decoration: BoxDecoration(color: Colors.orange),
+         ),
+
+       ],
+     ),
+   ),

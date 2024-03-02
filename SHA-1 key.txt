@@ -1,0 +1,4 @@
+Firebase SHA-1 Key বের করার জন্য টার্মিনালে গিয়ে নিচের command-টি ব্যবহার করতে হবে...
+
+
+keytool -list -v -keystore C:\Users\alaza\.android\debug.keystore -alias androiddebugkey -storepass android -keypass android

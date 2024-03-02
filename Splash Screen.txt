@@ -1,0 +1,12 @@
+<==SplashScreen এর জন্য নিচের কোডটুকু ব্যবহার করতে হবে==>  
+
+
+
+@override
+  void initState() {
+    Future.delayed(Duration(seconds: 4), () {
+      //Navigator.push(context,MaterialPageRoute(builder: (_,) => HomePage()));
+      Get.off(HomePage());
+    });
+    super.initState();
+  }

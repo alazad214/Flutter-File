@@ -1,0 +1,46 @@
+Stack Widget: 
+একটা Widget এর উপর আরেকটা Widget নেয়ার জন্য ‍Stack Widget ব্যবহৃত হয়। 
+আমরা Container, Row, Column এর মাধ্যমে ‍Stack Widget সুন্দরভাবে ব্যবহার করতে পারি।  যেমন: 
+        Stack(
+          children: [
+            Container(
+              height: 200,
+              width: 200,
+              color: Colors.red,
+            ),
+            Container(
+              height: 150,
+              width: 150,
+              color: Colors.teal,
+            ),
+            Container(
+              height: 100,
+              width: 100,
+              color: Colors.cyan,
+            )
+          ],
+        )
+
+Positioned Widget:
+Stack Widget কে বিভিন্ন পজিশনে নিয়ে যাওয়ার জন্য Positioned Widget ব্যবহৃত হয়। 
+এজন্য Stack Widget কে Positioned দ্বারা Wrap করতে হবে। যেমন:
+
+ Stack(
+          clipBehavior: Clip.none,
+          alignment: Alignment.center,
+          children: [
+            Container(
+              height: 200,
+              width: 200,
+              color: Colors.red,
+            ),
+            Positioned(
+              bottom: -10,
+              child: Container(
+                height: 100,
+                width: 100,
+                color: Colors.cyan,
+              ),
+            )
+          ],
+        )

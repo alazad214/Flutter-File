@@ -1,0 +1,1 @@
+flutter Rest API ব্যবহার করার জন্য http package-টি ব্যবহার করতে হবে। example হিসেবে দেখার জন্য json placeholder-Website থেকে যেকোনো একটা api নিবো। এরপর একটা Helper class & একটা model class Create করতে হবে। এরপর ‍api এর ডাটাগুলো কপি করে json to dart(quicktype)এর website থেকে মডেল তৈরি করে নিতে হবে। এরপর model class-এ সেটা বসিয়ে দিতে হবে। যেমন: 

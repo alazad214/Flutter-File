@@ -1,0 +1,29 @@
+কোনো Widgets এর OnPressed/OnTap-এর মাধ্যমে User কে Message দেয়ার জন্য SnackBar ব্যবহৃত হয়। 
+SnackBar দুইভাবে Create করা যায়। যেমন: 
+1. Method Create করে,
+2.সরাসরি onTap/Onpressed এ ‍ScaffoldMessanger Class নিয়ে।
+
+  
+Method Create করে:
+MySnackBar(message, context){
+    ScaffoldMessenger.of(context).showSnackBar(
+    SnackBar(content: Text(message))
+    );
+  }
+[MySnackBar Method টি Ontap/onpressed এ কল করে দিলে SnackBar টি কাজ করবে।]
+
+
+সরাসরি onTap/Onpressed এ ‍ScaffoldMessanger Class নিয়ে:
+ onPressed: (){
+                ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text("This is Snackber"),
+                      action: SnackBarAction(onPressed: (){print("Banlgdesh");},
+                        label: "Done",
+                      ),
+                      duration: Duration(
+                        seconds: 2
+                      ),
+                    )
+                );
+              },

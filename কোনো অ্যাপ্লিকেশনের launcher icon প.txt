@@ -1,0 +1,12 @@
+কোনো অ্যাপ্লিকেশনের launcher icon পরিবর্তন করার জন্য সেই app এর প্রজেক্ট ফাইলে Asset এ একটা লোগো রাখবো। এরপর pubspec.ymal-এ inisialization করবো। এরপর Flutter_launcher_icons প্যাকেজটি dev_dependencies-এ দিয়ে pub get দিবো। এরপর নিচের কোডগুলোর মতো লেখবো: 
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "asset/icons/logoapp.png"
+  min_sdk_android: 21
+এরপর terminal-এ একটা কমান্ড চালাবো: 
+flutter pub run flutter_launcher_icons

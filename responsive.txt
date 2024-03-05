@@ -1,1 +1,1 @@
-Flutter Responsive Design এর জন্য 
+Flutter Responsive Design এর জন্য Screenutilinit প্যাকেজটি ব্যবহার করতে হবে।

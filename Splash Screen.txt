@@ -4,9 +4,22 @@
 
 @override
   void initState() {
+
+
     Future.delayed(Duration(seconds: 4), () {
       //Navigator.push(context,MaterialPageRoute(builder: (_,) => HomePage()));
       Get.off(HomePage());
+    });
+
+
+
+    super.initState();
+  }
+
+
+অথবা, Future.delayed এর পরিবর্তে Timer ব্যবহার করতে পারি:
+   Timer(const Duration(seconds: 5), () {
+      Get.off(const Homepage());
     });
     super.initState();
   }

@@ -1,0 +1,6 @@
+Firebase দুইভাবে Add করা যায়। যেমন: 
+1.manually
+2.CLI(Command Line Interface)
+
+আমাদের Application-এ Firebase add করার জন্য প্রথমে Firebase-এর Website থেকে Console এ  গিয়ে নতুন একটা project Create করবো। 
+এরপর একটা নাম দিয়ে default রেখে create kore nibo. এরপর android project এর জন্য 

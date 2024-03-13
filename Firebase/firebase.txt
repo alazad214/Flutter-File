@@ -1,0 +1,17 @@
+Firebase হলো গুগলের তৈরি একটা রেডিমেট ব্যাকইন্ড সিস্টেম। ফায়ারবেস দিয়ে সহজেই একটা ফাংশনাল অ্যাপ বানানো সম্ভব। Firebase ছাড়াও বেশকিছু রেডিমেট ব্যাকইন্ড আছে। যেমন: ‍Aws ampify, Appwrite.
+
+Functional application বানানোর জন্য একটা ব্যাকইন্ডে যা যা দরকার তা সবকিছুই Firebase এ আছে। যেমন:
+1.Authentication 
+2. Database
+  i.cloud firestore
+  ii.realtime database
+3.firebase Storage
+4.push notificaton
+5.analytics
+6.crashlytics
+7.cloud messaging
+8.dynamic links
+9.admob
+10.cloud function
+11.firebase hosting
+12.machine learning ete..

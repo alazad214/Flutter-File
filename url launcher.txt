@@ -1,0 +1,14 @@
+কোনো widget-এ চাপ দিয়ে যদি url launch করাতে চাই তাহলে url_launcher: ^6.2.5 প্যাকেজটি implementation করতে হবে। এরপর সেই widget এর ontap/onpassed-এ নিচের কোডটি লেখতে হবে:
+
+
+ final Uri url = Uri.parse(project.url.toString());
+                          if (!await launchUrl(url)) {
+                            throw Exception('Could not launch $url');
+                          }
+
+
+অথবা,
+ final Uri url = Uri.parse("url....");
+                          if (!await launchUrl(url)) {
+                            throw Exception('Could not launch $url');
+                          }

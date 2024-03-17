@@ -1,6 +1,46 @@
 Firebase দুইভাবে Add করা যায়। যেমন: 
 1.manually
 2.CLI(Command Line Interface)
+এখন আমরা CLI দিয়ে এড করার ধাপগুলো দেখবো:
 
-আমাদের Application-এ Firebase add করার জন্য প্রথমে Firebase-এর Website থেকে Console এ  গিয়ে নতুন একটা project Create করবো। 
-এরপর একটা নাম দিয়ে default রেখে create kore nibo. এরপর android project এর জন্য 
+1. Node js Download and Install..
+   web:https://nodejs.org/en
+2. Environment Variabel SetUp..
+   path--> (i) users\alazad\AppData\Local\Pub\Cache\bin
+           (i) users\alazad\AppData\Roaming\npn
+
+3.Firebase project create..
+   web:https://console.firebase.google.com
+4.এরপর নিচের কমান্ডটি command prompt তে চালাতে হবে:
+    npm install -g firebase-tools
+6. এরপর আবার নিচের কমান্ডটি command prompt তে চালাতে হবে:
+     firebase login
+     [এরপর একটা ব্রাউজারে নিয়ে গেলে সেখানে সব allow করে দিতে হবে।যদি আগে login করা থাকে, সেই email change করতে চাইলে firebase logout কমান্ড চালাতে হবে। এরপর পুণরায় firebase lonin কমান্ট চালাতে হবে। এবং প্রসেসগুলো allow করতে হবে।]
+     
+7.এরপর নিচের কমান্ডটি চালাতে হবে:
+  firebase projects:list
+
+8.এরপর পূণরায় নিচের কমান্টটি চালাবো:
+  dart pub global activate flutterfire_cli 
+
+[এটি আমাদের ফায়ারবেস প্রজেক্টের ভিতবে পাবো।]
+
+9. এরপর আমাদের ফ্লাটার প্রজেক্টে গিয়ে terminel-এ গিয়ে নিচের কমান্টটি চালাবো: 
+
+ flutterfire configure --project=example-firebase-6096e
+
+ [এটিও আমাদের ফায়ারবেস প্রজেক্টের ভিতবে পাবো।]
+
+ 10.এরপর firebase core package টি implementation করতে হবে।
+
+11. এরপর main ফাংশনে নিচের কোডগুলো লেখবো:
+
+W  WidgetsFlutterBinding.ensureInitialized();
+ await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+
+
+
+

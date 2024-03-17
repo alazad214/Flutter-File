@@ -1,0 +1,20 @@
+Image slider create করার জন্য another_carousel_pro: ^1.0.2 package টি implementation করতে হবে। 
+
+ AnotherCarousel(dotSize: 4, images: [
+                            Image.asset(
+                              "assets/image/azad.jpg",
+                              fit: BoxFit.cover,
+                            ),
+                            Image.asset(
+                              "assets/image/p1.png",
+                              fit: BoxFit.cover,
+                            ),
+                            Image.asset(
+                              "assets/image/p2.jpg",
+                              fit: BoxFit.cover,
+                            ),
+                            Image.asset(
+                              "assets/image/p3.jpg",
+                              fit: BoxFit.cover,
+                            ),
+                          ]))

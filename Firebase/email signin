@@ -1,0 +1,33 @@
+১. Flutter Application-এ ফায়ারবেস দিয়ে Sign in করার জন্য ফায়ারবেসে গিয়ে authentication-এ email & password enable করে দিব। 
+২.এরপর firebse auth package install করে নিবো।
+৩.flutter new project তৈরি করবো। 
+৪. UI create করবো। [ দুইটা textformfield, একটা button, এরপর দুইটা textcontroller তৈরি করে textformfield দিয়ে দিব।]
+৫. নিচের কোডটি signup class এ দিব:
+
+  TextEditingController _emailcontroller = TextEditingController();
+  TextEditingController _passwordcontroller = TextEditingController();
+  SignIn(email, pass, context) async {
+    try {
+      final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: email,
+        password: pass,
+      );
+      var authCredential = credential.user;
+      if (authCredential!.uid.isNotEmpty) {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => HomePage()));
+      }
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'user-not-found') {
+        print('No user found for that email.');
+      } else if (e.code == 'wrong-password') {
+        print('Wrong password provided for that user.');
+      }
+    }
+  }
+
+  ৬. এরপর Button-এর ontap এ এই মেথডটি বসিয়ে দিব:
+        onPressed: () {
+                  SignIn(
+                      _emailcontroller.text, _passwordcontroller.text, context);
+                },

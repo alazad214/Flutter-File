@@ -1,0 +1,3 @@
+যদি কোনো ফ্লাটার অ্যাপে appbar এর উপরে debaug banner দেখা যায় তাহলে myapp-এ নিচের কোড লেখতে হবে:
+
+  debugShowCheckedModeBanner: false,

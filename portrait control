@@ -1,0 +1,7 @@
+   অ্যাপকে portrait কন্ট্রোল করার জন্য Myapp class এ Getmaterialapp/MaterialApp এর উপরে নিচের কোড লেখতে হবে। 
+   
+   
+   SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);

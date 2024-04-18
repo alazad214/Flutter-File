@@ -1,0 +1,146 @@
+//-------------------->>>code 1
+
+
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
+import 'package:praner_market/widgets/custom_button.dart';
+import 'package:praner_market/widgets/custom_textField.dart';
+
+import '../widgets/custom_title_subtitle.dart';
+
+class Login_Screen extends StatelessWidget {
+  Login_Screen({super.key});
+
+  final _formkey = GlobalKey<FormState>();
+
+  @override
+  Widget build(BuildContext context) {
+    final Height = MediaQuery.of(context).size.height;
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Lottie.asset("assets/animations/login.json",
+                  height: Height / 2.5),
+              const Custom_Title_SubTitle(
+                title: "Login!",
+                subtitle:
+                    "Login with your email and password if you have already signed up to the app.",
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: Column(
+                  children: [
+                    Form(
+                      child: Custom_formField(
+                        prefixicon: Icons.email,
+                        hinttext: "Email",
+                        validation: (value) {
+                          if (value!.isEmpty) {
+                            return "Fill The Form";
+                          }
+                          return null;
+                        },
+                      ),
+                    ),
+                    SizedBox(
+                        height:
+                            10), // Add some space between TextFormField and Button
+                    Custom_Button(
+                      text: "LogIn",
+                      ontap: () {
+                        if (_formkey.currentState!.validate()) {
+                          Get.snackbar("done", "working");
+                        }
+                      },
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+
+
+//-------------------->>>code 2
+
+
+
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
+import 'package:praner_market/widgets/custom_button.dart';
+import 'package:praner_market/widgets/custom_textField.dart';
+
+import '../widgets/custom_title_subtitle.dart';
+
+class Login_Screen extends StatelessWidget {
+  Login_Screen({super.key});
+
+  final _formkey = GlobalKey<FormState>();
+
+  @override
+  Widget build(BuildContext context) {
+    final Height = MediaQuery.of(context).size.height;
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Lottie.asset("assets/animations/login.json",
+                  height: Height / 2.5),
+              const Custom_Title_SubTitle(
+                title: "Login!",
+                subtitle:
+                    "Login with your email and password if you have already signed up to the app.",
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: Column(
+                  children: [
+                    Form(
+                      child: Custom_formField(
+                        prefixicon: Icons.email,
+                        hinttext: "Email",
+                        validation: (value) {
+                          if (value!.isEmpty) {
+                            return "Fill The Form";
+                          }
+                          return null;
+                        },
+                      ),
+                      key: _formkey,
+                    ),
+                    SizedBox(
+                        height:
+                            10), // Add some space between TextFormField and Button
+                    Custom_Button(
+                      text: "LogIn",
+                      ontap: () {
+                        if (_formkey.currentState!.validate()) {
+                          Get.snackbar("done", "working");
+                        }
+                      },
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

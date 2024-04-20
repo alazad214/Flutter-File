@@ -1,0 +1,21 @@
+Log_In() async {
+  isloading.value = true;
+  update();
+  try {
+    await auth
+        .signInWithEmailAndPassword(
+            email: email.value, password: password.value)
+        .then((value) {
+      if (value.user != null) {
+        isloading.value = false;
+        update();
+        Get.offAll(Home_Screen());
+        Get.snackbar("Seccess", "Login Successfully");
+      }
+    });
+  } on FirebaseAuthException catch (error) {
+    isloading.value = false;
+    update();
+    Get.snackbar("Error", error.message ?? "Something Wrong");
+  }
+}

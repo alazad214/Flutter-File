@@ -1,0 +1,7 @@
+flutter build web --web-renderer html 
+cd build/ web
+clear
+cd..
+cd
+
+

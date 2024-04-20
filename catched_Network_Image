@@ -1,0 +1,12 @@
+  
+    cached_network_image: ^3.3.1
+  
+  CachedNetworkImage(
+                          height: 100,
+                          fit: BoxFit.cover,
+                          imageUrl: data["image"],
+                          placeholder: (context, url) =>
+                              const Center(child: CircularProgressIndicator()),
+                          errorWidget: (context, url, error) =>
+                              const Icon(Icons.error),
+                        ),

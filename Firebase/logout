@@ -1,0 +1,10 @@
+  Future signOut() async {
+    FirebaseAuth _auth = FirebaseAuth.instance;
+    try {
+      await _auth.signOut().then((value) {
+        Get.offAll(LogIn_Screen());
+      });
+    } on FirebaseAuthException catch (e) {
+      Get.snackbar("Error",e.message?? "something wrong");
+    }
+  }

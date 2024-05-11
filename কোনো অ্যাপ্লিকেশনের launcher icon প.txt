@@ -10,3 +10,20 @@ flutter_launcher_icons:
   min_sdk_android: 21
 এরপর terminal-এ একটা কমান্ড চালাবো: 
 flutter pub run flutter_launcher_icons
+
+
+
+
+
+
+//onothers---->>>
+
+flutter_launcher_icons: ^0.13.1
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/image/blogrider.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "assets/image/blogrider.png"

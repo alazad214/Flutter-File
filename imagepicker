@@ -1,0 +1,36 @@
+   //First Step----->
+         final ImagePicker picker = ImagePicker();
+  XFile? image;
+  List<XFile>? images;
+  formGallery() async {
+    image = await picker.pickImage(source: ImageSource.gallery);
+    setState(() {});
+  }
+       
+
+  //Second Step----->      
+         image == null
+                ? Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  )
+                : Container(
+                    height: 200,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.green, width: 2)),
+                    child: ClipRect(
+                      child: Image.file(
+                        File(image!.path),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+
+ //Third Step----->
+
+                   onPressed: () {
+                  formGallery();
+                },
